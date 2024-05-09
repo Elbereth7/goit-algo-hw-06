@@ -57,7 +57,7 @@ if __name__ == '__main__':
         print(record)
 
     # Trying to remove, edit and find nonexisting phone
-    maciej_record.remove_phone('5230949014')
-    maciej_record.edit_phone('5230949014', '8594055834')
-    maciej_record.find_phone('5230949014')
+    # maciej_record.remove_phone('5230949014')
+    # maciej_record.edit_phone('5230949014', '8594055344')
+    # maciej_record.find_phone('5230949014')
 
