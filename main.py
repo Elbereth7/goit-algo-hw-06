@@ -44,6 +44,7 @@ if __name__ == '__main__':
     maciej_record.add_phone("2039459284")
     book.add_record(maciej_record)
     maciej_record.add_phone("7779459284")
+    maciej_record.add_phone("5745469284")
 
     # Displaying all records in the book
     for name, record in book.data.items():

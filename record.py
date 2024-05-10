@@ -12,8 +12,8 @@ class Record:
     
     # Method for adding Phone objects
     def add_phone(self, phone):
-        Phone(phone).phone_validation()
-        self.phones.append(Phone(phone))
+        new_phone = Phone(phone)
+        self.phones.append(new_phone)
 
     # Method for removing Phone objects
     def remove_phone(self, phone):
@@ -24,13 +24,12 @@ class Record:
 
     # Method for editing Phone objects
     def edit_phone(self, phone, new_phone):
-        Phone(new_phone).phone_validation()
-        for p in self.phones:
-            if p.value == phone:
-                p.value = new_phone
-                break
-        else:
+        old_phone = self.find_phone(phone)
+        if not old_phone:
             raise ValueError (f"Editing phone {phone} failed. Phone {phone} not found for contact {self.name}")
+        self.add_phone(new_phone)
+        self.remove_phone(phone)
+            
         
     # Method for finding Phone objects
     def find_phone(self, phone):
